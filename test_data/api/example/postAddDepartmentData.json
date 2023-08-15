@@ -1,0 +1,31 @@
+{
+  "module": "DepartmentManagement",
+  "cases": [
+    {
+      "id": "001",
+      "name": "create department",
+      "url": "https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=",
+      "method": "post",
+      "headers": null,
+      "params": "",
+      "payload": "{\n   \"name\": \"广州\",\n   \"name_en\": \"test\",\n   \"parentid\": 1,\n   \"order\": 1,\n   \"id\": 2\n}",
+      "code": 200,
+      "response": null,
+      "validations": "\"errcode\":0,\"errmsg\": \"created\"",
+      "variables": ""
+    },
+    {
+      "id": "002",
+      "name": "create department for testing parameterize",
+      "url": "https://${host}:${port}/cgi-bin/department/create?access_token=",
+      "method": "post",
+      "headers": null,
+      "params": "",
+      "payload": "{\n   \"name\": \"${name}\",\n   \"name_en\": \"${name_en}\",\n   \"parentid\": 1,\n   \"order\": 1,\n   \"id\": 2\n}",
+      "code": 200,
+      "response": null,
+      "validations": "\"errcode\":0,\"errmsg\": \"created\"",
+      "variables": ""
+    }
+  ]
+}

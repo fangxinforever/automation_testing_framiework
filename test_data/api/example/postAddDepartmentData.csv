@@ -1,0 +1,8 @@
+Module,CaseNo,CaseName,Url,Method,Headers,Params,RequestPayload,HttpCode,Response,Validations,Variables
+DepartmentManagement,1,Testcase,/department/create?access_token=,POST,,"{
+   ""name"": ""${name}"",
+   ""name_en"": ""${name_en}"",
+   ""parentid"": 1,
+   ""order"": 1,
+   ""id"": 2
+}",,200,,"""errcode"":0,""errmsg"": ""created""",

@@ -1,0 +1,18 @@
+module: DepartmentManagement
+cases:
+  - id: '001'
+    name: 创建部门
+    url: /department/create?access_token=
+    method: POST
+    headers:
+    params:
+      name: ${name}
+      name_en: "RDGZ"
+      parentid: 1
+      order: 1
+      id: 2
+    payload:
+    code: 200
+    response:
+    validations: '"errcode":0,"errmsg": "created"'
+    variables:

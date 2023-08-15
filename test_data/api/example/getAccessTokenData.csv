@@ -1,0 +1,4 @@
+Module,CaseNo,CaseName,Url,Method,Headers,Params,RequestPayload,HttpCode,Response,Validations,Variables
+Login,1,get token,/gettoken,GET,,corpid=ww152ef7dc359ff01b&corpsecret=47oKWL-bBaEvV4JG8wVXtbDb9StnL-ZqQldaztU9CJo,,200,,"""errcode"":0,""errmsg"":""ok""",
+Login,2,corpid is error,/gettoken,GET,,corpid=123123&corpsecret=47oKWL-bBaEvV4JG8wVXtbDb9StnL-ZqQldaztU9CJo,,200,,"""errcode"":40013,""errmsg"":""invalid corpid",
+Login,3,corpsecret is error,/gettoken,GET,,corpid=ww152ef7dc359ff01b&corpsecret=123123,,200,,"""errcode"":40001,""errmsg"":""invalid credential",

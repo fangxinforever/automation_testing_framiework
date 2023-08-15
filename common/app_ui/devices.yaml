@@ -1,0 +1,25 @@
+﻿appium:
+ - devices: emulator-5554
+   port: 4723
+   config: node /usr/local/lib/node_modules/appium/build/lib/main.js  -p 4723 -bp 4733 -U emulator-5554
+   platformName: android
+devices:
+  test_local:
+    port: 4732
+    deviceType: SIMULATOR
+    deviceName: emulator-5554
+    platformType: ANDROID
+    platformName: Android
+    platformVersion: 10.0.0
+    app: test_data/app_ui/Android-NativeDemoApp-0.2.1.apk
+    noReset: true
+  test_real:
+    port: 4732
+    deviceType: SIMULATOR
+    deviceName: emulator-5554
+    platformType: ANDROID
+    platformName: Android
+    platformVersion: 10.0.0
+    app: test_data/app_ui/Android-NativeDemoApp-0.2.1.apk
+    noReset: true
+

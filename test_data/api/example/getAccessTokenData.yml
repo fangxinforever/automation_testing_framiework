@@ -1,0 +1,38 @@
+module: Login
+cases:
+  -
+    id: '001'
+    name: get access token
+    url: /gettoken
+    method: GET
+    headers:
+    params: corpid=ww152ef7dc359ff01b&corpsecret=47oKWL-bBaEvV4JG8wVXtbDb9StnL-ZqQldaztU9CJo
+    payload:
+    code: 200
+    response:
+    validations: '"errcode":0,"errmsg":"ok"'
+    variables:
+  -
+    id: '002'
+    name: get access token when corpid is error
+    url: /gettoken
+    method: GET
+    headers:
+    params: corpid=123123&corpsecret=47oKWL-bBaEvV4JG8wVXtbDb9StnL-ZqQldaztU9CJo
+    payload:
+    code: 200
+    response:
+    validations: '"errcode":40013,"errmsg":"invalid corpid'
+    variables:
+  -
+    id: '003'
+    name: get access token when corpsecret is error
+    url: /gettoken
+    method: GET
+    headers:
+    params: corpid=ww152ef7dc359ff01b&corpsecret=123123
+    payload:
+    code: 200
+    response:
+    validations: '"errcode":40001,"errmsg":"invalid credential'
+    variables:

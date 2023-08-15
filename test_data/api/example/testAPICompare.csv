@@ -1,0 +1,3 @@
+Module,CaseNo,CaseName,Url,Method,Headers,Params,RequestPayload,HttpCode,Response,ResponseHeaderValidations,ResponseHeaderVariables,Validations,Variables
+getContent,1,,https://api.github.com/repos/xinfang2022/python_automation_framework/contents/learning1.py,get,{'Authorization':'Bearer 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'},,,200,,,,"{""sha"":""exists()""}","{""sha"":""sha""}"
+getContent,2,,https://api.github.com/repos/xinfang2022/python_automation_framework/contents/learning2.py,get,{'Authorization':'Bearer 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'},,,200,,,,"{""sha"":""exists()""}","{""sha"":""sha""}"

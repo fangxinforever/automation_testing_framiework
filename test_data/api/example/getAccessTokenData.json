@@ -1,0 +1,44 @@
+{
+  "module": "login",
+  "cases": [
+    {
+      "id": "001",
+      "name": "get token",
+      "url": "https://qyapi.weixin.qq.com/cgi-bin/gettoken",
+      "method": "get",
+      "headers": null,
+      "params": "corpid=ww152ef7dc359ff01b&corpsecret=47oKWL-bBaEvV4JG8wVXtbDb9StnL-ZqQldaztU9CJo",
+      "payload": null,
+      "code": 200,
+      "response": null,
+      "validations": "\"errcode\":0,\"errmsg\":\"ok\"",
+      "variables": ""
+    },
+    {
+      "id": "002",
+      "name": "get token for testing parameterize",
+      "url": "https://${host}:${port}/cgi-bin/gettoken",
+      "method": "get",
+      "headers": null,
+      "params": "corpid=${corpid}&corpsecret=${corpsecret}",
+      "payload": null,
+      "code": 200,
+      "response": null,
+      "validations": "${validations}",
+      "variables": ""
+    },
+    {
+      "id": "003",
+      "name": "corpid is error",
+      "url": "https://qyapi.weixin.qq.com/cgi-bin/gettoken",
+      "method": "get",
+      "headers": null,
+      "params": "corpid=123123&corpsecret=47oKWL-bBaEvV4JG8wVXtbDb9StnL-ZqQldaztU9CJo",
+      "payload": null,
+      "code": 200,
+      "response": null,
+      "validations": "\"errcode\":40013,\"errmsg\":\"invalid corpid",
+      "variables": ""
+    }
+  ]
+}

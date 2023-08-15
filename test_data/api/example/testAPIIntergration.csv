@@ -1,0 +1,12 @@
+Module,CaseNo,CaseName,Url,Method,Headers,Params,RequestPayload,HttpCode,Response,ResponseHeaderValidations,ResponseHeaderVariables,Validations,Variables
+getSHA,1,,https://api.github.com/repos/Xiaodan666/python_automation_framework/contents/learning.py,get,{'Authorization':'Bearer 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'},,,200,,,,"{""sha"":""exists()""}","{""sha"":""sha""}"
+createContentByToken,2,,https://api.github.com/repos/Xiaodan666/python_automation_framework/contents/learning.py,put,{'Authorization':'Bearer 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'},,test_data/api/example/testIntergration_createContent.json,200,,,,"{""content.sha"":""exists()""}","{""sha"":""content.sha""}"
+UpdateContent,3,,https://api.github.com/repos/Xiaodan666/python_automation_framework/contents/learning.py,put,{'Authorization':'Bearer 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'},,test_data/api/example/testIntergration_updateContent.yml,200,,,,"{""content.sha"":""exists()""}","{""sha"":""content.sha""}"
+deleteContent,4,,https://api.github.com/repos/Xiaodan666/python_automation_framework/contents/learning.py,delete,{'Authorization':'Bearer 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'},,"{
+  ""message"": ""delete a file"",
+  ""sha"": ""${sha}""
+}",200,,,,"{""content"":null}",
+createContentByToken,2,,https://api.github.com/repos/Xiaodan666/python_automation_framework/contents/learning.py,put,{'Authorization':'Bearer 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'},,"{
+  ""message"": ""commit from INSOMNIA"",
+  ""content"": ""4444"", ""sha"":""${sha}""
+}",201,,,,"{""content.sha"":""exists()""}","{""sha"":""content.sha""}"

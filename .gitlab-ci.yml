@@ -1,0 +1,11 @@
+image: python:3.10
+
+stages:          # List of stages for jobs, and their order of execution
+  - test
+
+test-job:   # This job runs in the test stage.
+  stage: test
+  script:
+    - echo "Running test cases"
+    - pip install -r requirements.txt
+    - python run_all.py

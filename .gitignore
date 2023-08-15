@@ -1,0 +1,10 @@
+# ignore file
+.idea/
+.pytest_cache
+*.pytest_cache
+venv/
+*__pycache__*
+*.pyc
+test_results/
+*.DS_Store
+
